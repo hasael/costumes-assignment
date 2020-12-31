@@ -19,7 +19,7 @@ public class ActiveMqConfig {
     @Bean
     public ConnectionFactory connectionFactory(){
         ActiveMQConnectionFactory activeMQConnectionFactory  = new ActiveMQConnectionFactory();
-        activeMQConnectionFactory.setBrokerURL("tcp://localhost:61616");
+        activeMQConnectionFactory.setBrokerURL(brokerUrl);
         activeMQConnectionFactory.setTrustedPackages(Arrays.asList("com.mailshine.springbootstandaloneactivemq"));
         return  activeMQConnectionFactory;
     }
